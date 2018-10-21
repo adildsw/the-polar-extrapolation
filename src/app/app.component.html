@@ -1,0 +1,17 @@
+<div class="main">
+    <img id="logotext" src="/assets/images/title-white.png" alt="The Polar Extrapolation">
+    <particles class="particles" [params]="particleParams"></particles>
+    <div id="iconlist">
+            <img src="/assets/images/icearea.png" id="icon" (click)="toggleIceArea()">
+            <img src="/assets/images/iceage.png" id="icon" (click)="toggleIceAge()">
+            <img src="/assets/images/sealevel.png" id="icon" (click)="toggleSeaLevel()">
+    </div>
+    <div>
+        <p class="facts"><b>Did You Know? </b><i>{{facts}}</i></p>
+        <br>
+        <p class="tips"><b>SAVE YOUR PLANET: </b><i>{{tips}}</i></p>
+    </div>
+    <app-factor-icearea></app-factor-icearea>
+    <app-factor-sealevel></app-factor-sealevel>
+    <app-factor-iceage></app-factor-iceage>
+</div>

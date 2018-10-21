@@ -1,0 +1,47 @@
+.panel{
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    background-color: rgb(255,250,245);
+    border-radius: 10px;
+}
+
+.dimmer {
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: black;
+}
+
+.chart {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+}
+
+#head {
+    position: absolute;
+    left: 43%;
+}
+
+#graphdetails {
+    padding-left: 35%;
+}
+
+.info {
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    right: 5%;
+}
+
+.chartdesc {
+    position: absolute;
+    top: 66%;
+    left: 28%;
+}

@@ -1,0 +1,23 @@
+<div class="dimmer" [@dimmerFadeInOut]="state" (click)="toggleSeaLevel()"></div>
+
+<div class="panel" [@fadeInOut]="state">
+    <h1 id="head">Sea Level</h1>
+    <div class="chart">
+        <div style="display: block;" *ngIf="chartData && chartAxis; else loading">
+            <canvas baseChart width="100" height="300" 
+                    [datasets]="lineChartData" 
+                    [labels]="lineChartLabels" 
+                    [options]="lineChartOptions"
+                    [colors]="lineChartColors" 
+                    [legend]="lineChartLegend" 
+                    [chartType]="lineChartType" >
+            </canvas>
+        </div>
+        <p id="graphdetails">Sea Level Change from 1993 vs Years</p>
+    </div>
+    <div class="info">
+        <p><b>Description: </b>Mean sea level is an average level of the surface of the Earth’s oceans. It is used as a reference for studying heights such as land elevation. Careful measurement of variations in mean sea level can offer insights into ongoing climate change, and sea level rise has been widely quoted as evidence of ongoing global warming.</p>
+        <p><b>Factors: </b>The increase in global warming has caused an alarming increase in the mean sea level. This is a threat to the coastal regions. </p>
+    </div>
+</div>
+

@@ -1,0 +1,42 @@
+<div class="dimmer" [@dimmerFadeInOut]="state" (click)="toggleIceAge()"></div>
+
+<div class="panel" [@fadeInOut]="state">
+    <h1 id="head">Sea Ice Age</h1>
+    <div class="chart">
+        <div style="display: block;" *ngIf="chartData && chartAxis; else loading">
+            <canvas baseChart width="100" height="300" 
+                    [datasets]="lineChartData" 
+                    [labels]="lineChartLabels" 
+                    [options]="lineChartOptions"
+                    [colors]="lineChartColors" 
+                    [legend]="lineChartLegend" 
+                    [chartType]="barChartType" >
+            </canvas>
+        </div>
+        <p id="graphdetails">Average Ice Age Percentage vs Year Graph [Use the slider to browse through different Sea Ice Ages]</p>
+        <div class="sliderDiv">
+            <mat-slider
+                class="slider"
+                [disabled]="false"
+                [invert]="false"
+                [max]="5"
+                [min]="1"
+                [step]="1"
+                [thumbLabel]="false"
+                [tickInterval]="1"
+                [vertical]="false"
+                (input)="onSliderChange($event)">
+            </mat-slider>
+        </div>
+    </div>
+    <div class="info">
+        <p><b>Description: </b>The ice age data gives an estimate of how long the ice has survived the melt cycles. Thick layers of ice survive the longest, with their surface melting during the melt period and then reforming later. Ice age data thus gives us a collective estimate of annual mean temperature change (causing more severe melt cycles) and the ice thickness (the older, the thicker). It’s an indicator of how vulnerable the ice pack is to melting.</p>
+        <p><b>Factors: </b>For sea ice, age matters. Sea ice in the Arctic is becoming younger and thinner, so that the ice pack is even more vulnerable to melting. Young, thin ice can melt very rapidly during a warm Arctic summer.
+            If ice survives a melt season, it grows thicker over the winter. The next melt season, it is more resistant to melting out. If ice completely melts away during a melt season, the ice cover that re-freezes over winter is much thinner and more vulnerable to melting out the next season.
+            </p>
+    </div>
+    <div class="chartdesc">
+        <i>{{chartinfo}}</i>
+    </div>
+</div>
+

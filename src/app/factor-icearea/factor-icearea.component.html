@@ -1,0 +1,40 @@
+<div class="dimmer" [@dimmerFadeInOut]="state" (click)="toggleIceArea()"></div>
+
+<div class="panel" [@fadeInOut]="state">
+    <h1 id="head">Polar Ice Area</h1>
+    <div class="chart">
+        <div style="display: block;" *ngIf="chartData && chartAxis; else loading">
+            <canvas baseChart width="100" height="300" 
+                    [datasets]="lineChartData" 
+                    [labels]="lineChartLabels" 
+                    [options]="lineChartOptions"
+                    [colors]="lineChartColors" 
+                    [legend]="lineChartLegend" 
+                    [chartType]="lineChartType" >
+            </canvas>
+        </div>
+        <p id="graphdetails">Average Sea Ice Area Concentration (million sq. kms) vs Time [Use the slider to browse through different Months]</p>
+        <div class="sliderDiv">
+            <mat-slider
+                class="slider"
+                [disabled]="false"
+                [invert]="false"
+                [max]="12"
+                [min]="1"
+                [step]="1"
+                [thumbLabel]="false"
+                [tickInterval]="1"
+                [vertical]="false"
+                (input)="onSliderChange($event)">
+            </mat-slider>
+        </div>
+    </div> 
+    <div class="info">
+        <p><b>Description: </b>The amount of ice capping the Arctic and the Antarctic regions of the planet is defined as the ice area. Our data presents the Arctic and the Antarctic ice area data separately, demonstrating seasonal changes as well as environmental changes, as observed from trends noted over the years.</p>
+        <p><b>Factors: </b>An accumulation of greenhouse gases over the years is responsible for the gradual increase in annual average global temperature. This causes increased melting of ice, thus decreasing the overall ice area.</p>
+    </div>
+    <div class="chartdesc">
+            <i>{{chartinfo}}</i>
+    </div>
+</div>
+

@@ -1,0 +1,55 @@
+.panel{
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    background-color: rgb(255,250,245);
+    border-radius: 10px;
+}
+
+.dimmer {
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: black;
+}
+
+.chart {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+}
+
+.sliderDiv {
+    position: absolute;
+    left: 43%;
+    display: inline-block;
+}
+
+#head {
+    position: absolute;
+    left: 43%;
+}
+
+#graphdetails {
+    padding-left: 20%;
+}
+
+.info {
+    position: absolute;
+    top: 73%;
+    left: 5%;
+    right: 5%;
+}
+
+.chartdesc {
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
