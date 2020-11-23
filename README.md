@@ -8,7 +8,7 @@
 ## Getting Started
 The following instructions will help you get this system up and running in your local system.
 
-### Prequisites
+### Prerequisites
 Before proceeding to the installation, make sure that your system contains all the prerequisites.
 #### 1. Install Python 3.6+ ([Anaconda](https://www.anaconda.com/download/) distribution recommended)
 #### 2. Install Python Dependencies
